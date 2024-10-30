@@ -1,0 +1,21 @@
+<p>event works! (Click)</p>
+
+<button (click)="contar($event)">Contar</button> <!--Este evento tiene un tipo target y ese tiene que decir es el evento que tiene que ser capturado -->
+<!-- osea que el target del evento click es button por eso usamos el evento click en un button-->
+{{contador}}
+<h2>event (input)</h2>
+<input type="text" (input)="setCadena($event)"> <!--para capturar evento uso esto si o si (input)="setCadena($event)-->
+<!--lo mismo aca, el target del input es de tipo input-->
+<input type="text" (mouseover)="setCadena($event)"> <!--para capturar evento uso esto si o si (input)="setCadena($event)-->
+<!--este es otro tipo de evento, cada vez q pasas el mouse por el input es un event -->
+<p>----------------------------------------------------</p>
+<input type="text" (input)="setCadena($event)"> <!--asi se captura un evento-->
+{{cadena}}
+<h2>event (change)</h2>
+<input type="text" (change)="changeCadena($event)">
+{{cadenaChange}} <!-- aca el string se almacena cuando apreto enter-->
+<h2>event (keyup)</h2>
+<input type="text" (keyup)="setKey($event)"> <!-- dentro del input capturo la tecla que apreto-->
+{{key}}
+{{x}}
+<!---->

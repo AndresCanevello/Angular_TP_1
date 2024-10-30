@@ -1,0 +1,39 @@
+<p>ng-for works!</p>
+
+<ul>
+    <li *ngFor="let item of estudiantes">
+        {{item.nombre}}
+    </li>
+</ul>
+
+<ol>
+@for(est of estudiantes;track $index)
+{
+    <li>{{est.nombre}}</li>   
+}
+</ol>
+<!-- el @ me indica que es una directiva-->
+<ol>
+    @for(est of estudiantes;track $index)
+{
+    @if(est.id > 2)
+    {
+        <li>{{est.nombre}}</li>   
+    }
+  
+}
+</ol>
+
+<!--switch-->
+@switch (color) {
+    @case ('red') {
+        <!--html asociado a la condicion-->
+        <p>este es el color rojo</p>
+    }
+    @case ('blue') {
+        <p>este es el color azul</p>
+    }
+    @default {
+        <p>default</p>
+    }
+}

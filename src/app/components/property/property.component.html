@@ -1,0 +1,19 @@
+<p>property works!</p>
+<img [src]="imgUrl" alt=""> <!-- esta propiedad aporta dinamica por que aca no puedo modificar la imgUrl pero en el ts si -->
+ <!-- resivo la informacion en el TS y muestro por pantalla de esta manera, esto es propertyBanding -->
+<img 
+[src]="producto.url" 
+[alt]="producto.slug"
+[width]="producto.width"
+[class.fondo] = true
+> <!-- [class.fondo] = true
+        esto se usa bastante para activar o desactivar clases, puede ser un resultado que si es true usa un estilo sino otro -->
+
+
+<p [style.background-color] = "color">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi pariatur ea consequuntur ad illum voluptatum voluptatem, quia illo ullam! Aliquam aut eligendi laborum cum blanditiis molestias, eum iure repellat quia.
+<!-- aun que se pueda hacer asi la manera correcta es : -->
+</p>
+ <p [style.color]="color"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos aut voluptates libero totam rem a quos, mollitia corporis, numquam cupiditate facilis ut distinctio. Laboriosam, minima! Eaque numquam distinctio dolores tempore.
+
+ </p>
+
